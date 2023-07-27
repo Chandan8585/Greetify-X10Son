@@ -1,10 +1,10 @@
 import React from 'react';
-
-const Task = (props) => {
-  console.log(props.userName)
+import { useBrowser } from '../../context/BrowserContext';
+const Task = () => {
+  const {name } = useBrowser();
   return (
     <div>
-      <h1>Welcome {props.userName}</h1>
+      <h1>Welcome {name}</h1>
       {/* Other content related to the task component */}
     </div>
   );
