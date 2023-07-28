@@ -1,0 +1,37 @@
+.strike-through{
+    text-decoration: line-through;
+}
+.task-container{
+    padding-top: 4rem;
+}
+.focus-question{
+    font-size: 2rem;
+}
+.time{
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+.today-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.assigned-task{
+    font-size: 1.5rem;
+    border: 2px solid red;
+    width: 100%;
+    text-align: center;
+}
+.checkbox{
+
+     height: 1.5rem;
+     width: 1.5rem;   
+}
+label[htmlFor="task"]{
+    font-size: 2rem;
+    margin: 20px;
+}
+
