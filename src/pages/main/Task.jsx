@@ -1,15 +1,19 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { useBrowser } from '../../context/BrowserContext';
 import { quotes } from '../../db/Quote';
-import "./task.css"
+import "./Task.css"
+import { Todo } from '../../components/todoList/TodoList';
 
 
 let randomIndex = Math.floor(Math.random()*quotes.length);
 let randomQuote = quotes[randomIndex].quote ;
 const Task = () => {
  const [isChecked, setIsChecked] = useState(false);
- 
+ const [isTodoOpen, setIsTodoOpen] = useState(false);
 
+ const handleToDoClick = () => {
+  setIsTodoOpen(isTodoOpen => !isTodoOpen);
+}
 
   const {time,name ,message, task, Browserdispatch} = useBrowser();
 
@@ -92,6 +96,8 @@ function handleTaskChange(event){
           
             <span className="time">{time}</span>
             <h1 className="message">{message} {name}</h1>
+  
+                      
           { name!==null && task===null ?
              <Fragment>
              <span className="focus-question">What is your main focus for today?</span>
@@ -113,17 +119,21 @@ function handleTaskChange(event){
                 </span>
                 </button>
                 </label>
-                 
-            
+             
             </div>
-
+                
             <Fragment>
-                  <p>{randomQuote}</p>
+                  <p className='quote-container'>{randomQuote}</p>
             </Fragment>
+
+            {isTodoOpen && <Todo />  }
+            <div className="todo-btn-container absolute">
+                <button className="button cursor todo-btn" onClick={handleToDoClick}>ToDo</button>
+            </div>
             </div>
         }
            
-           
+          
            
     </div>
   );

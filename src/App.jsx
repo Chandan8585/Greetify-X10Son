@@ -7,6 +7,7 @@ import Task from './pages/main/Task';
 
 
 
+
 let randomIndex = Math.floor(Math.random()*images.length);
 const RandomImage = images[randomIndex].image ;  
 
@@ -30,7 +31,7 @@ function App() {
     { name ?  <Task /> :
     <Home/> 
     }
-
+    
      </div>
     </>
   )
