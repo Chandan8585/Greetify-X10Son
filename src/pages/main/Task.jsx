@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { useBrowser } from '../../context/BrowserContext';
 import { quotes } from '../../db/Quote';
-import "../main/Task.css"
 import { Todo } from '../../components/todoList/TodoList';
 
 

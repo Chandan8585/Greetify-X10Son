@@ -139,3 +139,77 @@ body {
     font-size: 8px;
     line-height: 1rem;
 }
+
+.strike-through{
+    text-decoration: line-through;
+}
+.task-container{
+    padding-top: 4rem;
+
+}
+.focus-question{
+    font-size: 2rem;
+}
+.time{
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+.today-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.assigned-task{
+    font-size: 1.5rem;
+    
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;   
+}
+
+  
+
+
+
+.todo-content{
+    height: 10rem;
+    width: 10rem;
+}
+.checkbox{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+
+ button {
+    background-color: green;
+    border: none;
+    color: var(--text-color-primary);
+    border-radius: 5px;
+    margin-left: 2rem;
+} 
+
+.quote-container {
+    width: 70vw;
+    margin-top: 15rem;
+    position: absolute; 
+     top: 22rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.todo-btn-container {
+    right: 2rem;
+    bottom: 3.5rem;
+  
+}
+
+.todo-btn {
+    font-size: 2rem;
+    height: 4rem;
+    width: 8rem;
+}
